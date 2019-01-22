@@ -25,13 +25,16 @@
 # define W_IMG 1100
 # define H_IMG 1100
 # define NAME "Fractol by Lpelissi"
+# define MASK 1L<<8
 
 typedef struct	s_env
 {
 		/* main */
+	char		*name;
 	int			prm;
 	int			ctr;
 		/* mlx */
+	int			frac;
 	void		*mlx;
 	void		*win;
 	void		*img;
@@ -42,17 +45,10 @@ typedef struct	s_env
 		/* draw */
 
 	double		x1;
-	double 		x2;
-
 	double		y1;
-	double 		y2;
-
-	double 		img_x;
-	double 		img_y;
-
-	int			z;
+	double		z;
 	int 		itmax;
-
+	int			pow;
 	double 		x;
 	double 		y;
 	double 		c_r;
@@ -61,6 +57,7 @@ typedef struct	s_env
 	double 		z_i;
 	double 		i;
 	double 		tmp;
+	int 		mouse;
 }				t_env;
 
 
@@ -69,7 +66,10 @@ void	env_init(t_env *e);
 int	mandelbrot(t_env *e);
 int	julia(t_env *e);
 int	otherbrot(t_env *e);
+int	other_j(t_env *e);
 int	gere_key(int key, t_env *e);
+int gere_mouse(int k, int x, int y, t_env *e);
+int  gere_mouse_move(int x, int y, t_env *e);
 int	ft_expose(t_env *e);
 
 

@@ -26,10 +26,11 @@ int		check(t_env *e)
 int		main(int ac, char **av)
 {
 	t_env	*e;
-
 	(void)av;
 	if (!(e = (t_env*)malloc(sizeof(t_env))))
 		return (0);
+	e->name = av[1];
+	e->frac = 1;
 	e->prm = ac;
 	check(e);
 	ft_fractol(e);

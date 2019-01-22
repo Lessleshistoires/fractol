@@ -14,23 +14,21 @@
 
 void	env_init(t_env *e)
 {
- 	e->x1 = -2.7;
+	/*
+	all
+	*/
 	
+	e->x1 = -2.7;
 	e->y1 = -2.2;
-	
 	e->z = 200;
 	e->itmax = 100;
 
 	/* 
 	julia
 	*/
-	e->x2 = 2.7;
-	e->y2 = 2.2;
-	e->c_i = 0.01;
-	e->c_r = 0.285;
-	e->img_x = (e->x2 - e->x1) * e->z;
-	e->img_y = (e->y2 - e->y1) * e->z;
-	e->z_r = e->x / e->z + e->x1;
-	e->z_i = e->y / e->z + e->y1;
+	e->mouse = 0;
 
+	//e->z_i = e->y / e->z + e->y1;
+
+	e->pow = 3;
 }

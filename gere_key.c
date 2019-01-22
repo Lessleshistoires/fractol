@@ -21,57 +21,69 @@ int	gere_key(int key, t_env *e)
 	if (key == ESC)
 		exit(1);
 /* zoom */
-	if (key == LESS)
-		e->z *= 1.1;
+/*
 	if (key == MORE)
-		e->z /= 1.1;
+	{
+        e->x1 = (x / e->z + e->x1) - (x / (e->z * 1.3));
+		e->y1 = (y / e->z + e->y1) - (y / (e->z * 1.3));
+		e->z *= 1.3;
+	}
+	if (key == LESS)
+	{
+		e->x1 = (x / e->z + e->x1) - (x / (e->z / 1.3));
+		e->y1 = (y / e->z + e->y1) - (y / (e->z / 1.3));
+		e->z /= 1.3;
+	}
+*/
+/* choix */
+	if (key == ONE_PAD)
+	{
+		env_init(e);
+		e->frac = 1;
+	}
+	if (key == TWO_PAD)
+	{
+		env_init(e);
+		e->frac = 2;
+	}
+	if (key == THREE_PAD)
+	{
+		env_init(e);
+		e->frac = 3;
+	}			
+	if (key == FOUR_PAD)
+	{
+		env_init(e);
+		e->frac = 4;
+	}				
 /* move */
-	if (key == RIGHT)
-		e->x1 -= 0.1;
 	if (key == LEFT)
-		e->x1 += 0.1;
-	if (key == DOWN)
-		e->y1 -= 0.1;
+		e->x1 -= 0.01;
+	if (key == RIGHT)
+		e->x1 += 0.01;
 	if (key == UP)
-		e->y1 += 0.1;
+		e->y1 -= 0.01;
+	if (key == DOWN)
+		e->y1 += 0.01;
 /* iterations */
 	if (key == Z)
 		e->itmax += 2;
 	if (key == X && e->itmax >= 0)
 		e->itmax -= 2;
-
-		/* julia */
-/* motifs */
-	if (key == C)
-		 e->c_i -= 0.1;
-	if (key == V)
-		e->c_i += 0.1;		
-	if (key == B)
-		 e->c_r -= 0.1;
-	if (key == N)
-		e->c_r += 0.1;
-
+/*multibrot*/
 	if (key == O)
-	{
-		 e->x1 -= 0.1;
-		 e->x2 += 0.1;
-	}
+		e->pow += 1;
 	if (key == P)
-	{
-		 e->y1 -= 0.1;
-		 e->y2 += 0.1;
-	}
-	if (key == K)
-	{
-		 e->y1 += 0.1;
-		 e->y2 -= 0.1;
-	}
-	if (key == L)
-	{
-		 e->y1 += 0.1;
-		 e->y2 -= 0.1;
-	}
+		e->pow -= 1;
+	
+	if (key == I)
+		env_init(e);
+	if (key == M)
+		e->mouse = (e->mouse + 1) % 2;
 
+	
+	ft_putnbr(e->mouse);
+	//ft_putnbr(e->c_r);
 	ft_expose(e);
 	return (0);
 }

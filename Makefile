@@ -35,7 +35,9 @@ SRC = $(patsubst %,$(SDIR)/%,$(_SRC)))
 _SRC = main.c \
 		ft_fractol.c \
 		draw.c \
+		other_draw.c \
 		gere_key.c \
+		gere_mouse.c \
 		env_init.c \
 
 
