@@ -18,7 +18,7 @@ int		check(t_env *e)
 	if (e->prm != 2)
 	{
 		ft_putstr("wrong number of param\n");
-		return (0);
+		exit(1);
 	}
 	return (0);
 }

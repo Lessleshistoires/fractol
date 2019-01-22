@@ -21,13 +21,14 @@ void	env_init(t_env *e)
 	e->x1 = -2.7;
 	e->y1 = -2.2;
 	e->z = 200;
-	e->itmax = 100;
+	e->itmax = 25;
 
 	/* 
 	julia
 	*/
 	e->mouse = 0;
-
+	e->c_i = 0.01;
+	e->c_r = 0.285;
 	//e->z_i = e->y / e->z + e->y1;
 
 	e->pow = 3;

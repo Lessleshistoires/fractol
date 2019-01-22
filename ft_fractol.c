@@ -24,7 +24,9 @@ int	ft_expose(t_env *e)
 	if (e->frac == 3)
 		otherbrot(e);
 	if (e->frac == 4)
-		other_j(e);
+		cos_j(e);
+	if (e->frac == 5)
+		tan_j(e);
 	mlx_put_image_to_window(e->mlx, e->win, e->img, 0, 0);
 	mlx_destroy_image(e->mlx, e->img);
 	return (0);

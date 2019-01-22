@@ -55,6 +55,11 @@ int	gere_key(int key, t_env *e)
 	{
 		env_init(e);
 		e->frac = 4;
+	}
+	if (key == FIVE_PAD)
+	{
+		env_init(e);
+		e->frac = 5;
 	}				
 /* move */
 	if (key == LEFT)
@@ -80,10 +85,6 @@ int	gere_key(int key, t_env *e)
 		env_init(e);
 	if (key == M)
 		e->mouse = (e->mouse + 1) % 2;
-
-	
-	ft_putnbr(e->mouse);
-	//ft_putnbr(e->c_r);
 	ft_expose(e);
 	return (0);
 }

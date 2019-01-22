@@ -34,7 +34,7 @@ int	mandelbrot(t_env *e)
 			}
 			if (e->i == e->itmax)	
 			{
-				e->data[(int)e->x + ((int)e->y) * W_IMG] = RED;
+				e->data[(int)e->x + ((int)e->y) * W_IMG] = PINK;
 			}
 			else
 			{
@@ -56,8 +56,6 @@ int	julia(t_env *e)
 	{
 		while (e->y < H_IMG)
 		{
-			e->c_i = 0.01;
-			e->c_r = 0.285;
 			e->z_r = e->x / e->z + e->x1;
 			e->z_i = e->y / e->z + e->y1;
 			e->i = 0;
@@ -70,11 +68,15 @@ int	julia(t_env *e)
 			}
 			if (e->i == e->itmax)	
 			{
-				e->data[(int)e->x + (int)e->y * W_IMG] = YELLOW;
+				e->data[(int)e->x + (int)e->y * W_IMG] = PINK;
+			}
+			if (e->i < e->itmax / 2)
+			{
+				e->data[(int)e->x + (int)e->y * W_IMG] = e->i*255*256/e->itmax/2;
 			}
 			else
 			{
-				e->data[(int)e->x + (int)e->y * W_IMG] = e->i*GREEN/e->itmax;
+				e->data[(int)e->x + (int)e->y * W_IMG] = e->i*GREEN/e->itmax/2;
 			}
 			e->y++;
 		}
