@@ -12,30 +12,10 @@
 
 #include "fractol.h"
 
-
-
-
-int	gere_key(int key, t_env *e)
+void	select_f1(int key, t_env *e)
 {
-		/* all */
 	if (key == ESC)
 		exit(1);
-/* zoom */
-/*
-	if (key == MORE)
-	{
-        e->x1 = (x / e->z + e->x1) - (x / (e->z * 1.3));
-		e->y1 = (y / e->z + e->y1) - (y / (e->z * 1.3));
-		e->z *= 1.3;
-	}
-	if (key == LESS)
-	{
-		e->x1 = (x / e->z + e->x1) - (x / (e->z / 1.3));
-		e->y1 = (y / e->z + e->y1) - (y / (e->z / 1.3));
-		e->z /= 1.3;
-	}
-*/
-/* choix */
 	if (key == ONE_PAD)
 	{
 		env_init(e);
@@ -50,47 +30,63 @@ int	gere_key(int key, t_env *e)
 	{
 		env_init(e);
 		e->frac = 3;
-	}			
+	}
 	if (key == FOUR_PAD)
 	{
 		env_init(e);
 		e->frac = 4;
 	}
+}
+
+void	select_f2(int key, t_env *e)
+{
 	if (key == FIVE_PAD)
 	{
 		env_init(e);
 		e->frac = 5;
-	}		
+	}
 	if (key == SIX_PAD)
 	{
 		env_init(e);
 		e->frac = 6;
-	}			
-		if (key == SEVEN_PAD)
+	}
+	if (key == SEVEN_PAD)
 	{
 		env_init(e);
 		e->frac = 7;
-	}				
-/* move */
+	}
+	if (key == EIGHT_PAD)
+	{
+		env_init(e);
+		e->frac = 8;
+	}
+	if (key == NINE_PAD)
+	{
+		env_init(e);
+		e->frac = 9;
+	}
+}
+
+int		gere_key(int key, t_env *e)
+{
+	select_f1(key, e);
+	select_f2(key, e);
 	if (key == LEFT)
-		e->x1 -= 0.01;
+		e->x1 -= 1 / e->z;
 	if (key == RIGHT)
-		e->x1 += 0.01;
+		e->x1 += 1 / e->z;
 	if (key == UP)
-		e->y1 -= 0.01;
+		e->y1 -= 1 / e->z;
 	if (key == DOWN)
-		e->y1 += 0.01;
-/* iterations */
+		e->y1 += 1 / e->z;
 	if (key == Z)
 		e->itmax += 1;
 	if (key == X && e->itmax >= 0)
 		e->itmax -= 1;
-/*multibrot*/
 	if (key == O)
 		e->pow += 1;
 	if (key == P)
 		e->pow -= 1;
-	
 	if (key == I)
 		env_init(e);
 	if (key == M)

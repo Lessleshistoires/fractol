@@ -41,6 +41,7 @@
 # define Y 16
 # define Z 6
 
+# define ZERO_PAD 82
 # define ONE_PAD 83
 # define TWO_PAD 84
 # define THREE_PAD 85

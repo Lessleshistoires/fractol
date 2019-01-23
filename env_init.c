@@ -14,23 +14,17 @@
 
 void	env_init(t_env *e)
 {
-	/*
-	all
-	*/
-	
 	e->x1 = -3.7;
 	e->y1 = -3.5;
 	e->z = 150;
-	e->itmax = 5;
-
-	/* 
-	julia's
-	*/
-	
+	e->itmax = 17;
 	e->mouse = 0;
-	e->c_i = 0.01;
-	e->c_r = 0.285;
-	//e->z_i = e->y / e->z + e->y1;
-
+	e->c_i = 0.1;
+	e->c_r = -0.75;
 	e->pow = 3;
 }
+/*
+** all
+** julia's
+** mbro's
+*/
