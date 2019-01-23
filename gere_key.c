@@ -16,22 +16,22 @@ void	select_f1(int key, t_env *e)
 {
 	if (key == ESC)
 		exit(1);
-	if (key == ONE_PAD)
+	if (key == ONE_PAD || key == K1_KEY)
 	{
 		env_init(e);
 		e->frac = 1;
 	}
-	if (key == TWO_PAD)
+	if (key == TWO_PAD || key == K2_KEY)
 	{
 		env_init(e);
 		e->frac = 2;
 	}
-	if (key == THREE_PAD)
+	if (key == THREE_PAD || key == K3_KEY)
 	{
 		env_init(e);
 		e->frac = 3;
 	}
-	if (key == FOUR_PAD)
+	if (key == FOUR_PAD || key == K4_KEY)
 	{
 		env_init(e);
 		e->frac = 4;
@@ -40,27 +40,27 @@ void	select_f1(int key, t_env *e)
 
 void	select_f2(int key, t_env *e)
 {
-	if (key == FIVE_PAD)
+	if (key == FIVE_PAD || key == K5_KEY)
 	{
 		env_init(e);
 		e->frac = 5;
 	}
-	if (key == SIX_PAD)
+	if (key == SIX_PAD || key == K6_KEY)
 	{
 		env_init(e);
 		e->frac = 6;
 	}
-	if (key == SEVEN_PAD)
+	if (key == SEVEN_PAD || key == K7_KEY)
 	{
 		env_init(e);
 		e->frac = 7;
 	}
-	if (key == EIGHT_PAD)
+	if (key == EIGHT_PAD || key == K8_KEY)
 	{
 		env_init(e);
 		e->frac = 8;
 	}
-	if (key == NINE_PAD)
+	if (key == NINE_PAD || key == K9_KEY)
 	{
 		env_init(e);
 		e->frac = 9;

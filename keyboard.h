@@ -41,6 +41,17 @@
 # define Y 16
 # define Z 6
 
+# define K1_KEY 18
+# define K2_KEY 19
+# define K3_KEY 20
+# define K4_KEY 21
+# define K5_KEY 23
+# define K6_KEY 22
+# define K7_KEY 26
+# define K8_KEY 28
+# define K9_KEY 25
+# define K0_KEY 29
+
 # define ZERO_PAD 82
 # define ONE_PAD 83
 # define TWO_PAD 84
