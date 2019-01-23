@@ -28,6 +28,7 @@ int		name(t_env *e)
 	int		i;
 	char	*str;
 	char	*tmp;
+	char	*c;
 
 	if (!(str = (char*)malloc(sizeof(char) * 9)))
 		return (0);
@@ -39,7 +40,11 @@ int		name(t_env *e)
 		e->frac = 2;
 	while (i <= 9)
 	{
-		tmp = ft_strjoin(str, ft_itoa(i));
+		c = ft_itoa(i);
+		tmp = ft_strjoin(str, c);
+		free(c);
+		printf("%p\n", tmp);
+		printf("%p\n", str);
 		if (ft_strcmp(e->name, tmp) == 0)
 		{
 			e->frac = i;
@@ -48,6 +53,7 @@ int		name(t_env *e)
 		i++;
 	}
 	check(e, tmp);
+	free(tmp);
 	return (0);
 }
 
