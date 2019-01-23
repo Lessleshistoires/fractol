@@ -18,14 +18,15 @@ void	env_init(t_env *e)
 	all
 	*/
 	
-	e->x1 = -2.7;
-	e->y1 = -2.2;
-	e->z = 200;
-	e->itmax = 25;
+	e->x1 = -3.7;
+	e->y1 = -3.5;
+	e->z = 150;
+	e->itmax = 5;
 
 	/* 
-	julia
+	julia's
 	*/
+	
 	e->mouse = 0;
 	e->c_i = 0.01;
 	e->c_r = 0.285;

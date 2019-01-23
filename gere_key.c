@@ -60,6 +60,16 @@ int	gere_key(int key, t_env *e)
 	{
 		env_init(e);
 		e->frac = 5;
+	}		
+	if (key == SIX_PAD)
+	{
+		env_init(e);
+		e->frac = 6;
+	}			
+		if (key == SEVEN_PAD)
+	{
+		env_init(e);
+		e->frac = 7;
 	}				
 /* move */
 	if (key == LEFT)
@@ -72,9 +82,9 @@ int	gere_key(int key, t_env *e)
 		e->y1 += 0.01;
 /* iterations */
 	if (key == Z)
-		e->itmax += 2;
+		e->itmax += 1;
 	if (key == X && e->itmax >= 0)
-		e->itmax -= 2;
+		e->itmax -= 1;
 /*multibrot*/
 	if (key == O)
 		e->pow += 1;

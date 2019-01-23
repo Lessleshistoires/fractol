@@ -55,6 +55,8 @@ typedef struct	s_env
 	double 		c_i;
 	double 		z_r;
 	double 		z_i;
+	double		zrsqr;
+	double		zisqr;
 	double 		i;
 	double 		tmp;
 	int 		mouse;
@@ -63,11 +65,17 @@ typedef struct	s_env
 
 int ft_fractol(t_env *e);
 void	env_init(t_env *e);
+
 int	mandelbrot(t_env *e);
 int	julia(t_env *e);
-int	otherbrot(t_env *e);
-int	cos_j(t_env *e);
-int	tan_j(t_env *e);
+
+int	fractal3(t_env *e);
+int	fractal4(t_env *e);
+int	fractal5(t_env *e);
+int	fractal6(t_env *e);
+int	fractal7(t_env *e);
+
+
 int	gere_key(int key, t_env *e);
 int gere_mouse(int k, int x, int y, t_env *e);
 int  gere_mouse_move(int x, int y, t_env *e);

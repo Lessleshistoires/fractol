@@ -15,9 +15,37 @@
 
 int		check(t_env *e)
 {
+	int i;
+	char *str;
+	char *tmp;
+
+	if (!(str = (char*)malloc(sizeof(char) * 9)))
+		return (0);
+	str = "fractal-";
+	i = 3;
 	if (e->prm != 2)
 	{
 		ft_putstr("wrong number of param\n");
+		exit(1);
+	}
+	if (ft_strcmp(e->name, "mandelbrot") == 0)
+		e->frac = 1;
+	else if (ft_strcmp(e->name, "julia") == 0)
+		e->frac = 2;
+	while (i <= 7)
+	{
+		tmp = ft_strjoin(str, ft_itoa(i));
+		if (ft_strcmp(e->name, tmp) == 0)
+		{
+			e->frac = i;
+			return (0);
+		}
+		i++;
+	}
+	if (ft_strcmp(e->name, "mandelbrot") != 0 &&
+		ft_strcmp(e->name, "julia") != 0 && ft_strcmp(e->name, tmp) != 0)
+	{
+		ft_putstr("wrong file name\n");
 		exit(1);
 	}
 	return (0);
