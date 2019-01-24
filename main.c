@@ -30,8 +30,6 @@ int		name(t_env *e)
 	char	*tmp;
 	char	*c;
 
-	if (!(str = (char*)malloc(sizeof(char) * 9)))
-		return (0);
 	str = "fractal-";
 	i = 3;
 	if (ft_strcmp(e->name, "mandelbrot") == 0)
@@ -43,13 +41,13 @@ int		name(t_env *e)
 		c = ft_itoa(i);
 		tmp = ft_strjoin(str, c);
 		free(c);
-		printf("%p\n", tmp);
-		printf("%p\n", str);
 		if (ft_strcmp(e->name, tmp) == 0)
 		{
 			e->frac = i;
 			return (0);
 		}
+		if (i >= 3 && i <= 8)
+			free(tmp);
 		i++;
 	}
 	check(e, tmp);
