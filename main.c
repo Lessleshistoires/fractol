@@ -32,10 +32,6 @@ int		name(t_env *e)
 
 	str = "fractal-";
 	i = 3;
-	if (ft_strcmp(e->name, "mandelbrot") == 0)
-		e->frac = 1;
-	else if (ft_strcmp(e->name, "julia") == 0)
-		e->frac = 2;
 	while (i <= 9)
 	{
 		c = ft_itoa(i);
@@ -70,6 +66,10 @@ int		main(int ac, char **av)
 		ft_putstr("wrong number of param\n");
 		exit(1);
 	}
+	if (ft_strcmp(e->name, "mandelbrot") == 0)
+		e->frac = 1;
+	else if (ft_strcmp(e->name, "julia") == 0)
+		e->frac = 2;
 	name(e);
 	ft_fractol(e);
 	free(e);
