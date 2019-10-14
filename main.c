@@ -6,7 +6,7 @@
 /*   By: lpelissi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 13:59:31 by lpelissi          #+#    #+#             */
-/*   Updated: 2019/01/21 13:59:33 by lpelissi         ###   ########.fr       */
+/*   Updated: 2019/10/09 16:17:15 by lpelissi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		check(t_env *e, char *tmp)
 	if (ft_strcmp(e->name, "mandelbrot") != 0 &&
 		ft_strcmp(e->name, "julia") != 0 && ft_strcmp(e->name, tmp) != 0)
 	{
-		ft_putstr("wrong file name\n");
+		ft_putstr(" wrong file call\n only calls allowed:\n mandelbrot\n julia\n fractal-3\n fractal-4\n fracatl-5\n fractal-6\n fractal-7\n fractal-8\n fractal-9\n");
 		exit(1);
 	}
 	return (0);
@@ -63,7 +63,7 @@ int		main(int ac, char **av)
 	e->prm = ac;
 	if (e->prm != 2)
 	{
-		ft_putstr("wrong number of param\n");
+		ft_putstr("wrong number of parameters\n");
 		exit(1);
 	}
 	if (ft_strcmp(e->name, "mandelbrot") == 0)
