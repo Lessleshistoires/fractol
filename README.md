@@ -37,7 +37,9 @@ Julia (n•2):
 Exemple of power of Mandelbrot (n•3)
 
 ![Alt text](/img/mandel_pow3.png?raw=true "Optional Title")
+
 ![Alt text](/img/mandel_pow4.png?raw=true "Optional Title")
+
 ![Alt text](/img/mandel_pow7.png?raw=true "Optional Title")
 
 Mandelbrot fabs (n•4) :
