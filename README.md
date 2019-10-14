@@ -1,2 +1,12 @@
 # fractol
 ![Alt text](/img/mandel.png?raw=true "Optional Title")
+![Alt text](/img/julia.png?raw=true "Optional Title")
+![Alt text](/img/mandel_pow3.png?raw=true "Optional Title")
+![Alt text](/img/mandel_pow4.png?raw=true "Optional Title")
+![Alt text](/img/mandel_pow7.png?raw=true "Optional Title")
+![Alt text](/img/mandel2.png?raw=true "Optional Title")
+![Alt text](/img/mandel_ship.png?raw=true "Optional Title")
+![Alt text](/img/jul1.png?raw=true "Optional Title")
+![Alt text](/img/jul2.png?raw=true "Optional Title")
+![Alt text](/img/jul3.png?raw=true "Optional Title")
+![Alt text](/img/jul4.png?raw=true "Optional Title")
