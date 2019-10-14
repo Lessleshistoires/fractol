@@ -2,25 +2,28 @@
 Realised in c language
 Just git clone and do make in your terminal
 lauch executable with one of this argumemts :
-mandelbrot
-julia
-fractal-3
-fractal-4
-fracatl-5
-fractal-6
-fractal-7
-ractal-8
+mandelbrot; julia; fractal-3; fractal-4; fracatl-5; fractal-6; fractal-7
+fractal-8
 fractal-9
 
 Commands list:
+
 i : come back to the first representation of the fractal 
+
 right click : zoom in
+
 left click : zoom out
+
 z : one more iteration
+
 x : one less iteration 
+
 numbers from 1 to 9 : switch between fractals
+
 For n•3 only to switch between power:
+
 o : one more power
+
 p : one less power
 
 Mandelbrot (n•1):
