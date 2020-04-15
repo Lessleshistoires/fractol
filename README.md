@@ -2,9 +2,16 @@
 Realised in c language
 Just git clone and do make in your terminal
 lauch executable with one of this argumemts :
-mandelbrot; julia; fractal-3; fractal-4; fracatl-5; fractal-6; fractal-7
-fractal-8
-fractal-9
+
+    mandelbrot; 
+    julia; 
+    fractal-3; 
+    fractal-4; 
+    fractal-5; 
+    fractal-6; 
+    fractal-7
+    fractal-8
+    fractal-9
 
 Commands list:
 
